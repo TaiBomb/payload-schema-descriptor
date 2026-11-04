@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "description": "Payload CMS plugin that serves a JSON description of your schema and how it maps to database tables",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaiBomb/payload-schema-descriptor.git"
+  },
+  "homepage": "https://github.com/TaiBomb/payload-schema-descriptor#readme",
+  "bugs": {
+    "url": "https://github.com/TaiBomb/payload-schema-descriptor/issues"
+  },
   "keywords": [
     "payload",
     "payloadcms",

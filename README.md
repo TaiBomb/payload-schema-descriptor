@@ -166,13 +166,17 @@ pnpm add file:../payload-schema-descriptor/payload-schema-descriptor-0.1.0.tgz
 
 ## Publishing
 
+Releases go out from GitHub Actions ([`publish.yml`](.github/workflows/publish.yml))
+when a version tag is pushed:
+
 ```bash
-npm version patch   # or minor / major
-npm publish         # runs typecheck and tests first, then builds
+npm version patch   # or minor / major, bumps package.json and creates the tag
 git push --follow-tags
 ```
 
-You need to be logged in first (`npm login`).
+The workflow checks that the tag matches `package.json`, runs typecheck and tests,
+builds and publishes. It authenticates through npm trusted publishing, so there's
+no npm token in the repo secrets.
 
 ## Things to check when upgrading Payload
 
