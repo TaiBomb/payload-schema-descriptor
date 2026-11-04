@@ -1,0 +1,57 @@
+{
+  "name": "payload-schema-descriptor",
+  "version": "0.1.0",
+  "description": "Payload CMS plugin that serves a JSON description of your schema and how it maps to database tables",
+  "license": "Apache-2.0",
+  "keywords": [
+    "payload",
+    "payloadcms",
+    "payload-plugin",
+    "schema",
+    "database",
+    "postgres",
+    "introspection"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:update": "vitest run -u",
+    "prepack": "pnpm run build",
+    "prepublishOnly": "pnpm run typecheck && pnpm test"
+  },
+  "peerDependencies": {
+    "payload": "^3.0.0"
+  },
+  "devDependencies": {
+    "@payloadcms/db-postgres": "3.87.0",
+    "@types/node": "^22.10.0",
+    "graphql": "^16.9.0",
+    "payload": "3.87.0",
+    "typescript": "5.7.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@11.17.0"
+}

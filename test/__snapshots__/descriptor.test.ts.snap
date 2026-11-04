@@ -1,0 +1,2758 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
+{
+  "collections": [
+    {
+      "auth": true,
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "displayName",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "email",
+          "required": true,
+          "type": "email",
+        },
+        {
+          "hasReadAccess": true,
+          "localized": false,
+          "name": "_verified",
+          "required": false,
+          "type": "checkbox",
+        },
+        {
+          "defaultValue": 0,
+          "hasMany": false,
+          "hidden": true,
+          "localized": false,
+          "name": "loginAttempts",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "hidden": true,
+          "localized": false,
+          "name": "lockUntil",
+          "required": false,
+          "type": "date",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": false,
+      "slug": "users",
+      "timestamps": true,
+      "upload": false,
+      "versions": false,
+    },
+    {
+      "auth": false,
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": true,
+          "name": "alt",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "hasAfterReadHooks": true,
+          "hasMany": false,
+          "localized": false,
+          "name": "url",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasAfterReadHooks": true,
+          "hasMany": false,
+          "localized": false,
+          "name": "thumbnailURL",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "filename",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "mimeType",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "filesize",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "width",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "height",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "focalX",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "focalY",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "fields": [
+            {
+              "fields": [
+                {
+                  "hasAfterReadHooks": true,
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "url",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "width",
+                  "required": false,
+                  "type": "number",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "height",
+                  "required": false,
+                  "type": "number",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "mimeType",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "filesize",
+                  "required": false,
+                  "type": "number",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "filename",
+                  "required": false,
+                  "type": "text",
+                },
+              ],
+              "localized": false,
+              "name": "thumbnail",
+              "required": false,
+              "type": "group",
+            },
+            {
+              "fields": [
+                {
+                  "hasAfterReadHooks": true,
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "url",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "width",
+                  "required": false,
+                  "type": "number",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "height",
+                  "required": false,
+                  "type": "number",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "mimeType",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "filesize",
+                  "required": false,
+                  "type": "number",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "filename",
+                  "required": false,
+                  "type": "text",
+                },
+              ],
+              "localized": false,
+              "name": "card",
+              "required": false,
+              "type": "group",
+            },
+          ],
+          "localized": false,
+          "name": "sizes",
+          "required": false,
+          "type": "group",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": false,
+      "slug": "media",
+      "timestamps": true,
+      "upload": {
+        "imageSizes": [
+          "thumbnail",
+          "card",
+        ],
+      },
+      "versions": false,
+    },
+    {
+      "auth": false,
+      "dbName": "cats",
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "name",
+          "required": true,
+          "type": "text",
+        },
+        {
+          "collection": "posts",
+          "localized": false,
+          "name": "posts",
+          "on": "category",
+          "required": false,
+          "type": "join",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": false,
+      "slug": "categories",
+      "timestamps": true,
+      "upload": false,
+      "versions": false,
+    },
+    {
+      "auth": false,
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": true,
+          "name": "title",
+          "required": true,
+          "type": "text",
+        },
+        {
+          "hasMany": true,
+          "localized": false,
+          "name": "tags",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "localized": false,
+          "name": "summary",
+          "required": false,
+          "type": "textarea",
+        },
+        {
+          "localized": false,
+          "name": "contactEmail",
+          "required": false,
+          "type": "email",
+        },
+        {
+          "hasMany": true,
+          "localized": false,
+          "name": "scores",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "defaultValue": false,
+          "localized": false,
+          "name": "featured",
+          "required": false,
+          "type": "checkbox",
+        },
+        {
+          "hasDynamicDefault": true,
+          "localized": false,
+          "name": "publishedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "snippet",
+          "required": false,
+          "type": "code",
+        },
+        {
+          "localized": false,
+          "name": "meta",
+          "required": false,
+          "type": "json",
+        },
+        {
+          "localized": false,
+          "name": "location",
+          "required": false,
+          "type": "point",
+        },
+        {
+          "defaultValue": "one",
+          "localized": false,
+          "name": "layoutKind",
+          "options": [
+            "one",
+            "two",
+          ],
+          "required": false,
+          "type": "radio",
+        },
+        {
+          "dbName": "post_flags",
+          "hasMany": true,
+          "localized": false,
+          "name": "flags",
+          "options": [
+            "a",
+            "b",
+            "c",
+          ],
+          "required": false,
+          "type": "select",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "maxDepth": 1,
+          "name": "category",
+          "relationTo": "categories",
+          "required": false,
+          "type": "relationship",
+        },
+        {
+          "hasMany": true,
+          "localized": false,
+          "name": "related",
+          "relationTo": "posts",
+          "required": false,
+          "type": "relationship",
+        },
+        {
+          "hasMany": true,
+          "localized": false,
+          "name": "mixed",
+          "relationTo": [
+            "posts",
+            "categories",
+          ],
+          "required": false,
+          "type": "relationship",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "cover",
+          "relationTo": "media",
+          "required": false,
+          "type": "upload",
+        },
+        {
+          "localized": true,
+          "name": "body",
+          "required": false,
+          "type": "richText",
+        },
+        {
+          "hasMany": false,
+          "hidden": true,
+          "localized": false,
+          "name": "internalNote",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasAfterReadHooks": true,
+          "hasMany": false,
+          "localized": false,
+          "name": "computed",
+          "required": false,
+          "type": "number",
+          "virtual": true,
+        },
+        {
+          "hasMany": false,
+          "hasReadAccess": true,
+          "localized": false,
+          "name": "restricted",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "rowA",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "inCollapsible",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "inUnnamedTab",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "fields": [
+            {
+              "hasMany": false,
+              "localized": true,
+              "name": "metaTitle",
+              "required": false,
+              "type": "text",
+            },
+          ],
+          "localized": false,
+          "name": "seo",
+          "required": false,
+          "type": "tab",
+        },
+        {
+          "fields": [
+            {
+              "hasMany": false,
+              "localized": false,
+              "name": "subtitle",
+              "required": false,
+              "type": "text",
+            },
+            {
+              "fields": [
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "deep",
+                  "required": false,
+                  "type": "number",
+                },
+              ],
+              "localized": false,
+              "name": "nested",
+              "required": false,
+              "type": "group",
+            },
+          ],
+          "localized": false,
+          "name": "details",
+          "required": false,
+          "type": "group",
+        },
+        {
+          "dbName": "post_sections",
+          "fields": [
+            {
+              "hasMany": false,
+              "localized": false,
+              "name": "heading",
+              "required": false,
+              "type": "text",
+            },
+            {
+              "fields": [
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "label",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasDynamicDefault": true,
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "id",
+                  "required": false,
+                  "type": "text",
+                },
+              ],
+              "localized": false,
+              "name": "items",
+              "required": false,
+              "type": "array",
+            },
+            {
+              "hasDynamicDefault": true,
+              "hasMany": false,
+              "localized": false,
+              "name": "id",
+              "required": false,
+              "type": "text",
+            },
+          ],
+          "localized": true,
+          "name": "sections",
+          "required": false,
+          "type": "array",
+        },
+        {
+          "blocks": [
+            {
+              "fields": [
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "headline",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "image",
+                  "relationTo": "media",
+                  "required": false,
+                  "type": "upload",
+                },
+                {
+                  "hasDynamicDefault": true,
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "id",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "blockName",
+                  "required": false,
+                  "type": "text",
+                },
+              ],
+              "slug": "hero",
+            },
+          ],
+          "localized": false,
+          "name": "layout",
+          "required": false,
+          "type": "blocks",
+        },
+        {
+          "blocks": [
+            {
+              "dbName": "blk_quote",
+              "fields": [
+                {
+                  "localized": true,
+                  "name": "text",
+                  "required": true,
+                  "type": "textarea",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "author",
+                  "relationTo": "users",
+                  "required": false,
+                  "type": "relationship",
+                },
+                {
+                  "hasDynamicDefault": true,
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "id",
+                  "required": false,
+                  "type": "text",
+                },
+                {
+                  "hasMany": false,
+                  "localized": false,
+                  "name": "blockName",
+                  "required": false,
+                  "type": "text",
+                },
+              ],
+              "slug": "quote",
+            },
+          ],
+          "localized": false,
+          "name": "refLayout",
+          "required": false,
+          "type": "blocks",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "defaultValue": "draft",
+          "hasMany": false,
+          "localized": false,
+          "name": "_status",
+          "options": [
+            "draft",
+            "published",
+          ],
+          "required": false,
+          "type": "select",
+        },
+      ],
+      "hasAfterReadHooks": true,
+      "hasReadAccess": true,
+      "slug": "posts",
+      "timestamps": true,
+      "upload": false,
+      "versions": {
+        "drafts": true,
+      },
+    },
+    {
+      "auth": false,
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "key",
+          "required": true,
+          "type": "text",
+        },
+        {
+          "localized": false,
+          "name": "data",
+          "required": true,
+          "type": "json",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": true,
+      "slug": "payload-kv",
+      "timestamps": false,
+      "upload": false,
+      "versions": false,
+    },
+    {
+      "auth": false,
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": false,
+          "maxDepth": 0,
+          "name": "document",
+          "relationTo": [
+            "users",
+            "media",
+            "categories",
+            "posts",
+            "hidden-stuff",
+          ],
+          "required": false,
+          "type": "relationship",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "globalSlug",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "maxDepth": 1,
+          "name": "user",
+          "relationTo": [
+            "users",
+          ],
+          "required": true,
+          "type": "relationship",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": false,
+      "slug": "payload-locked-documents",
+      "timestamps": true,
+      "upload": false,
+      "versions": false,
+    },
+    {
+      "auth": false,
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "user",
+          "relationTo": [
+            "users",
+          ],
+          "required": true,
+          "type": "relationship",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "key",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "localized": false,
+          "name": "value",
+          "required": false,
+          "type": "json",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": true,
+      "slug": "payload-preferences",
+      "timestamps": true,
+      "upload": false,
+      "versions": false,
+    },
+    {
+      "auth": false,
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "name",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "batch",
+          "required": false,
+          "type": "number",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": false,
+      "slug": "payload-migrations",
+      "timestamps": true,
+      "upload": false,
+      "versions": false,
+    },
+  ],
+  "db": {
+    "adapter": "postgres",
+    "options": {
+      "blocksAsJSON": false,
+      "idType": "serial",
+      "localesSuffix": "_locales",
+      "relationshipsSuffix": "_rels",
+      "schemaName": "public",
+      "versionsSuffix": "_v",
+    },
+    "version": "16.4",
+    "versionNum": 160004,
+  },
+  "descriptorVersion": 1,
+  "globals": [
+    {
+      "dbName": null,
+      "fields": [
+        {
+          "hasMany": false,
+          "localized": true,
+          "name": "siteName",
+          "required": false,
+          "type": "text",
+        },
+        {
+          "hasMany": false,
+          "localized": false,
+          "name": "homepage",
+          "relationTo": "posts",
+          "required": false,
+          "type": "relationship",
+        },
+        {
+          "localized": false,
+          "name": "updatedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
+          "localized": false,
+          "name": "createdAt",
+          "required": false,
+          "type": "date",
+        },
+      ],
+      "hasAfterReadHooks": false,
+      "hasReadAccess": false,
+      "slug": "settings",
+      "versions": false,
+    },
+  ],
+  "hash": "sha256:fd5c19bd14c0575a0c9b60681bc9beff0a315af6f25b8afef403d9a0fd475906",
+  "lastMigration": "20261104_120000_add_posts",
+  "localization": {
+    "defaultLocale": "it",
+    "fallback": true,
+    "fallbackLocales": {
+      "en": "it",
+    },
+    "locales": [
+      "it",
+      "en",
+    ],
+  },
+  "payloadVersion": "3.87.0",
+  "physical": {
+    "tableNameMap": {
+      "_post_sections_v_items": "_post_sections_v_items",
+      "_posts_v": "_posts_v",
+      "_posts_v_blocks_hero": "_posts_v_blocks_hero",
+      "_posts_v_blocks_quote": "_blk_quote_v",
+      "_posts_v_version_flags": "_post_flags_v",
+      "_posts_v_version_sections": "_post_sections_v",
+      "categories": "cats",
+      "enum__posts_v_published_locale": "enum__posts_v_published_locale",
+      "enum__posts_v_version_flags": "post_flags",
+      "enum__posts_v_version_layout_kind": "enum__posts_v_version_layout_kind",
+      "enum__posts_v_version_status": "enum__posts_v_version_status",
+      "enum_posts_flags": "post_flags",
+      "enum_posts_layout_kind": "enum_posts_layout_kind",
+      "enum_posts_status": "enum_posts_status",
+      "media": "media",
+      "payload_kv": "payload_kv",
+      "payload_locked_documents": "payload_locked_documents",
+      "payload_migrations": "payload_migrations",
+      "payload_preferences": "payload_preferences",
+      "post_sections_items": "post_sections_items",
+      "posts": "posts",
+      "posts_blocks_hero": "posts_blocks_hero",
+      "posts_blocks_quote": "blk_quote",
+      "posts_flags": "post_flags",
+      "posts_sections": "post_sections",
+      "settings": "settings",
+      "users": "users",
+      "users_sessions": "users_sessions",
+    },
+    "tables": {
+      "_blk_quote_v": {
+        "columns": {
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_path": {
+            "name": "_path",
+            "notNull": true,
+            "type": "text",
+          },
+          "_uuid": {
+            "name": "_uuid",
+            "type": "varchar",
+          },
+          "author": {
+            "name": "author_id",
+            "reference": {
+              "column": "id",
+              "table": "users",
+            },
+            "type": "integer",
+          },
+          "blockName": {
+            "name": "block_name",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+        },
+      },
+      "_blk_quote_v_locales": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "text": {
+            "name": "text",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_blk_quote_v",
+              },
+            ],
+          },
+        },
+      },
+      "_post_flags_v": {
+        "columns": {
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "order": {
+            "name": "order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "value": {
+            "enumName": "post_flags",
+            "name": "value",
+            "options": [
+              "a",
+              "b",
+              "c",
+            ],
+            "type": "enum",
+          },
+        },
+        "foreignKeys": {
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+        },
+      },
+      "_post_sections_v": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_uuid": {
+            "name": "_uuid",
+            "type": "varchar",
+          },
+          "heading": {
+            "name": "heading",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+        },
+        "foreignKeys": {
+          "_parentIDFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+        },
+      },
+      "_post_sections_v_items": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_uuid": {
+            "name": "_uuid",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "label": {
+            "name": "label",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIDFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_post_sections_v",
+              },
+            ],
+          },
+        },
+      },
+      "_posts_v": {
+        "columns": {
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "latest": {
+            "name": "latest",
+            "type": "boolean",
+          },
+          "parent": {
+            "name": "parent_id",
+            "reference": {
+              "column": "id",
+              "table": "posts",
+            },
+            "type": "integer",
+          },
+          "publishedLocale": {
+            "enumName": "enum__posts_v_published_locale",
+            "name": "published_locale",
+            "options": [
+              "it",
+              "en",
+            ],
+            "type": "enum",
+          },
+          "snapshot": {
+            "name": "snapshot",
+            "type": "boolean",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "version__status": {
+            "enumName": "enum__posts_v_version_status",
+            "name": "version__status",
+            "options": [
+              "draft",
+              "published",
+            ],
+            "type": "enum",
+          },
+          "version_category": {
+            "name": "version_category_id",
+            "reference": {
+              "column": "id",
+              "table": "cats",
+            },
+            "type": "integer",
+          },
+          "version_contactEmail": {
+            "name": "version_contact_email",
+            "type": "varchar",
+          },
+          "version_cover": {
+            "name": "version_cover_id",
+            "reference": {
+              "column": "id",
+              "table": "media",
+            },
+            "type": "integer",
+          },
+          "version_createdAt": {
+            "name": "version_created_at",
+            "type": "timestamp",
+          },
+          "version_details_nested_deep": {
+            "name": "version_details_nested_deep",
+            "type": "numeric",
+          },
+          "version_details_subtitle": {
+            "name": "version_details_subtitle",
+            "type": "varchar",
+          },
+          "version_featured": {
+            "name": "version_featured",
+            "type": "boolean",
+          },
+          "version_inCollapsible": {
+            "name": "version_in_collapsible",
+            "type": "varchar",
+          },
+          "version_inUnnamedTab": {
+            "name": "version_in_unnamed_tab",
+            "type": "varchar",
+          },
+          "version_internalNote": {
+            "name": "version_internal_note",
+            "type": "varchar",
+          },
+          "version_layoutKind": {
+            "enumName": "enum__posts_v_version_layout_kind",
+            "name": "version_layout_kind",
+            "options": [
+              "one",
+              "two",
+            ],
+            "type": "enum",
+          },
+          "version_location": {
+            "name": "version_location",
+            "type": "geometry",
+          },
+          "version_meta": {
+            "name": "version_meta",
+            "type": "jsonb",
+          },
+          "version_publishedAt": {
+            "name": "version_published_at",
+            "type": "timestamp",
+          },
+          "version_restricted": {
+            "name": "version_restricted",
+            "type": "varchar",
+          },
+          "version_rowA": {
+            "name": "version_row_a",
+            "type": "varchar",
+          },
+          "version_snippet": {
+            "name": "version_snippet",
+            "type": "varchar",
+          },
+          "version_summary": {
+            "name": "version_summary",
+            "type": "varchar",
+          },
+          "version_updatedAt": {
+            "name": "version_updated_at",
+            "type": "timestamp",
+          },
+        },
+      },
+      "_posts_v_blocks_hero": {
+        "columns": {
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_path": {
+            "name": "_path",
+            "notNull": true,
+            "type": "text",
+          },
+          "_uuid": {
+            "name": "_uuid",
+            "type": "varchar",
+          },
+          "blockName": {
+            "name": "block_name",
+            "type": "varchar",
+          },
+          "headline": {
+            "name": "headline",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "image": {
+            "name": "image_id",
+            "reference": {
+              "column": "id",
+              "table": "media",
+            },
+            "type": "integer",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+        },
+      },
+      "_posts_v_locales": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "version_body": {
+            "name": "version_body",
+            "type": "jsonb",
+          },
+          "version_seo_metaTitle": {
+            "name": "version_seo_meta_title",
+            "type": "varchar",
+          },
+          "version_title": {
+            "name": "version_title",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+        },
+      },
+      "_posts_v_numbers": {
+        "columns": {
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "number": {
+            "name": "number",
+            "type": "numeric",
+          },
+          "order": {
+            "name": "order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+        },
+      },
+      "_posts_v_rels": {
+        "columns": {
+          "categoriesID": {
+            "name": "cats_id",
+            "type": "integer",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "order": {
+            "name": "order",
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "postsID": {
+            "name": "posts_id",
+            "type": "integer",
+          },
+        },
+        "foreignKeys": {
+          "categoriesIdFk": {
+            "columns": [
+              "categoriesID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "cats",
+              },
+            ],
+          },
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+          "postsIdFk": {
+            "columns": [
+              "postsID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "_posts_v_texts": {
+        "columns": {
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "order": {
+            "name": "order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "text": {
+            "name": "text",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "_posts_v",
+              },
+            ],
+          },
+        },
+      },
+      "blk_quote": {
+        "columns": {
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_path": {
+            "name": "_path",
+            "notNull": true,
+            "type": "text",
+          },
+          "author": {
+            "name": "author_id",
+            "reference": {
+              "column": "id",
+              "table": "users",
+            },
+            "type": "integer",
+          },
+          "blockName": {
+            "name": "block_name",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "blk_quote_locales": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "text": {
+            "name": "text",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "blk_quote",
+              },
+            ],
+          },
+        },
+      },
+      "cats": {
+        "columns": {
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "name": {
+            "name": "name",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+        },
+      },
+      "media": {
+        "columns": {
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "filename": {
+            "name": "filename",
+            "type": "varchar",
+          },
+          "filesize": {
+            "name": "filesize",
+            "type": "numeric",
+          },
+          "focalX": {
+            "name": "focal_x",
+            "type": "numeric",
+          },
+          "focalY": {
+            "name": "focal_y",
+            "type": "numeric",
+          },
+          "height": {
+            "name": "height",
+            "type": "numeric",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "mimeType": {
+            "name": "mime_type",
+            "type": "varchar",
+          },
+          "sizes_card_filename": {
+            "name": "sizes_card_filename",
+            "type": "varchar",
+          },
+          "sizes_card_filesize": {
+            "name": "sizes_card_filesize",
+            "type": "numeric",
+          },
+          "sizes_card_height": {
+            "name": "sizes_card_height",
+            "type": "numeric",
+          },
+          "sizes_card_mimeType": {
+            "name": "sizes_card_mime_type",
+            "type": "varchar",
+          },
+          "sizes_card_url": {
+            "name": "sizes_card_url",
+            "type": "varchar",
+          },
+          "sizes_card_width": {
+            "name": "sizes_card_width",
+            "type": "numeric",
+          },
+          "sizes_thumbnail_filename": {
+            "name": "sizes_thumbnail_filename",
+            "type": "varchar",
+          },
+          "sizes_thumbnail_filesize": {
+            "name": "sizes_thumbnail_filesize",
+            "type": "numeric",
+          },
+          "sizes_thumbnail_height": {
+            "name": "sizes_thumbnail_height",
+            "type": "numeric",
+          },
+          "sizes_thumbnail_mimeType": {
+            "name": "sizes_thumbnail_mime_type",
+            "type": "varchar",
+          },
+          "sizes_thumbnail_url": {
+            "name": "sizes_thumbnail_url",
+            "type": "varchar",
+          },
+          "sizes_thumbnail_width": {
+            "name": "sizes_thumbnail_width",
+            "type": "numeric",
+          },
+          "thumbnailURL": {
+            "name": "thumbnail_u_r_l",
+            "type": "varchar",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "url": {
+            "name": "url",
+            "type": "varchar",
+          },
+          "width": {
+            "name": "width",
+            "type": "numeric",
+          },
+        },
+      },
+      "media_locales": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "alt": {
+            "name": "alt",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "media",
+              },
+            ],
+          },
+        },
+      },
+      "payload_kv": {
+        "columns": {
+          "data": {
+            "name": "data",
+            "notNull": true,
+            "type": "jsonb",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "key": {
+            "name": "key",
+            "notNull": true,
+            "type": "varchar",
+          },
+        },
+      },
+      "payload_locked_documents": {
+        "columns": {
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "globalSlug": {
+            "name": "global_slug",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+        },
+      },
+      "payload_locked_documents_rels": {
+        "columns": {
+          "categoriesID": {
+            "name": "cats_id",
+            "type": "integer",
+          },
+          "hidden-stuffID": {
+            "name": "hidden_stuff_id",
+            "type": "integer",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "mediaID": {
+            "name": "media_id",
+            "type": "integer",
+          },
+          "order": {
+            "name": "order",
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "postsID": {
+            "name": "posts_id",
+            "type": "integer",
+          },
+          "usersID": {
+            "name": "users_id",
+            "type": "integer",
+          },
+        },
+        "foreignKeys": {
+          "categoriesIdFk": {
+            "columns": [
+              "categoriesID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "cats",
+              },
+            ],
+          },
+          "hidden-stuffIdFk": {
+            "columns": [
+              "hidden-stuffID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "hidden_stuff",
+              },
+            ],
+          },
+          "mediaIdFk": {
+            "columns": [
+              "mediaID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "media",
+              },
+            ],
+          },
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "payload_locked_documents",
+              },
+            ],
+          },
+          "postsIdFk": {
+            "columns": [
+              "postsID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+          "usersIdFk": {
+            "columns": [
+              "usersID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "users",
+              },
+            ],
+          },
+        },
+      },
+      "payload_migrations": {
+        "columns": {
+          "batch": {
+            "name": "batch",
+            "type": "numeric",
+          },
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "name": {
+            "name": "name",
+            "type": "varchar",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+        },
+      },
+      "payload_preferences": {
+        "columns": {
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "key": {
+            "name": "key",
+            "type": "varchar",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "value": {
+            "name": "value",
+            "type": "jsonb",
+          },
+        },
+      },
+      "payload_preferences_rels": {
+        "columns": {
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "order": {
+            "name": "order",
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "usersID": {
+            "name": "users_id",
+            "type": "integer",
+          },
+        },
+        "foreignKeys": {
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "payload_preferences",
+              },
+            ],
+          },
+          "usersIdFk": {
+            "columns": [
+              "usersID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "users",
+              },
+            ],
+          },
+        },
+      },
+      "post_flags": {
+        "columns": {
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "order": {
+            "name": "order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "value": {
+            "enumName": "post_flags",
+            "name": "value",
+            "options": [
+              "a",
+              "b",
+              "c",
+            ],
+            "type": "enum",
+          },
+        },
+        "foreignKeys": {
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "post_sections": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "heading": {
+            "name": "heading",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIDFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "post_sections_items": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "varchar",
+          },
+          "label": {
+            "name": "label",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIDFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "post_sections",
+              },
+            ],
+          },
+        },
+      },
+      "posts": {
+        "columns": {
+          "_status": {
+            "enumName": "enum_posts_status",
+            "name": "_status",
+            "options": [
+              "draft",
+              "published",
+            ],
+            "type": "enum",
+          },
+          "category": {
+            "name": "category_id",
+            "reference": {
+              "column": "id",
+              "table": "cats",
+            },
+            "type": "integer",
+          },
+          "contactEmail": {
+            "name": "contact_email",
+            "type": "varchar",
+          },
+          "cover": {
+            "name": "cover_id",
+            "reference": {
+              "column": "id",
+              "table": "media",
+            },
+            "type": "integer",
+          },
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "details_nested_deep": {
+            "name": "details_nested_deep",
+            "type": "numeric",
+          },
+          "details_subtitle": {
+            "name": "details_subtitle",
+            "type": "varchar",
+          },
+          "featured": {
+            "name": "featured",
+            "type": "boolean",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "inCollapsible": {
+            "name": "in_collapsible",
+            "type": "varchar",
+          },
+          "inUnnamedTab": {
+            "name": "in_unnamed_tab",
+            "type": "varchar",
+          },
+          "internalNote": {
+            "name": "internal_note",
+            "type": "varchar",
+          },
+          "layoutKind": {
+            "enumName": "enum_posts_layout_kind",
+            "name": "layout_kind",
+            "options": [
+              "one",
+              "two",
+            ],
+            "type": "enum",
+          },
+          "location": {
+            "name": "location",
+            "type": "geometry",
+          },
+          "meta": {
+            "name": "meta",
+            "type": "jsonb",
+          },
+          "publishedAt": {
+            "name": "published_at",
+            "type": "timestamp",
+          },
+          "restricted": {
+            "name": "restricted",
+            "type": "varchar",
+          },
+          "rowA": {
+            "name": "row_a",
+            "type": "varchar",
+          },
+          "snippet": {
+            "name": "snippet",
+            "type": "varchar",
+          },
+          "summary": {
+            "name": "summary",
+            "type": "varchar",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+        },
+      },
+      "posts_blocks_hero": {
+        "columns": {
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_path": {
+            "name": "_path",
+            "notNull": true,
+            "type": "text",
+          },
+          "blockName": {
+            "name": "block_name",
+            "type": "varchar",
+          },
+          "headline": {
+            "name": "headline",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "varchar",
+          },
+          "image": {
+            "name": "image_id",
+            "reference": {
+              "column": "id",
+              "table": "media",
+            },
+            "type": "integer",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "posts_locales": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "body": {
+            "name": "body",
+            "type": "jsonb",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "seo_metaTitle": {
+            "name": "seo_meta_title",
+            "type": "varchar",
+          },
+          "title": {
+            "name": "title",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "posts_numbers": {
+        "columns": {
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "number": {
+            "name": "number",
+            "type": "numeric",
+          },
+          "order": {
+            "name": "order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "posts_rels": {
+        "columns": {
+          "categoriesID": {
+            "name": "cats_id",
+            "type": "integer",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "order": {
+            "name": "order",
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "postsID": {
+            "name": "posts_id",
+            "type": "integer",
+          },
+        },
+        "foreignKeys": {
+          "categoriesIdFk": {
+            "columns": [
+              "categoriesID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "cats",
+              },
+            ],
+          },
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+          "postsIdFk": {
+            "columns": [
+              "postsID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "posts_texts": {
+        "columns": {
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "order": {
+            "name": "order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "parent": {
+            "name": "parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "path": {
+            "name": "path",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "text": {
+            "name": "text",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "parentFk": {
+            "columns": [
+              "parent",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "posts",
+              },
+            ],
+          },
+        },
+      },
+      "settings": {
+        "columns": {
+          "createdAt": {
+            "name": "created_at",
+            "type": "timestamp",
+          },
+          "homepage": {
+            "name": "homepage_id",
+            "reference": {
+              "column": "id",
+              "table": "posts",
+            },
+            "type": "integer",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "type": "timestamp",
+          },
+        },
+      },
+      "settings_locales": {
+        "columns": {
+          "_locale": {
+            "locale": true,
+            "name": "_locale",
+            "notNull": true,
+            "type": "enum",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "siteName": {
+            "name": "site_name",
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIdFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "settings",
+              },
+            ],
+          },
+        },
+      },
+      "users": {
+        "columns": {
+          "_verificationToken": {
+            "name": "_verificationtoken",
+            "type": "varchar",
+          },
+          "_verified": {
+            "name": "_verified",
+            "type": "boolean",
+          },
+          "apiKey": {
+            "name": "api_key",
+            "type": "varchar",
+          },
+          "apiKeyIndex": {
+            "name": "api_key_index",
+            "type": "varchar",
+          },
+          "createdAt": {
+            "name": "created_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "displayName": {
+            "name": "display_name",
+            "type": "varchar",
+          },
+          "email": {
+            "name": "email",
+            "notNull": true,
+            "type": "varchar",
+          },
+          "enableAPIKey": {
+            "name": "enable_a_p_i_key",
+            "type": "boolean",
+          },
+          "hash": {
+            "name": "hash",
+            "type": "varchar",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "serial",
+          },
+          "lockUntil": {
+            "name": "lock_until",
+            "type": "timestamp",
+          },
+          "loginAttempts": {
+            "name": "login_attempts",
+            "type": "numeric",
+          },
+          "resetPasswordExpiration": {
+            "name": "reset_password_expiration",
+            "type": "timestamp",
+          },
+          "resetPasswordToken": {
+            "name": "reset_password_token",
+            "type": "varchar",
+          },
+          "salt": {
+            "name": "salt",
+            "type": "varchar",
+          },
+          "updatedAt": {
+            "name": "updated_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+        },
+      },
+      "users_sessions": {
+        "columns": {
+          "_order": {
+            "name": "_order",
+            "notNull": true,
+            "type": "integer",
+          },
+          "_parentID": {
+            "name": "_parent_id",
+            "notNull": true,
+            "type": "integer",
+          },
+          "createdAt": {
+            "name": "created_at",
+            "type": "timestamp",
+          },
+          "expiresAt": {
+            "name": "expires_at",
+            "notNull": true,
+            "type": "timestamp",
+          },
+          "id": {
+            "name": "id",
+            "primaryKey": true,
+            "type": "varchar",
+          },
+        },
+        "foreignKeys": {
+          "_parentIDFk": {
+            "columns": [
+              "_parentID",
+            ],
+            "foreignColumns": [
+              {
+                "column": "id",
+                "table": "users",
+              },
+            ],
+          },
+        },
+      },
+    },
+  },
+}
+`;
