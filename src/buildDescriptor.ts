@@ -2,7 +2,7 @@ import {createHash} from "node:crypto";
 import {existsSync, readFileSync} from "node:fs";
 import path from "node:path";
 import type {Payload} from "payload";
-import {type FieldContext, serializeFields} from "./fields.js";
+import {type FieldContext, serializeFields, setStatic} from "./fields.js";
 import {buildDbOptions, buildPhysical, dbServerVersion} from "./physical.js";
 import {type Descriptor, DESCRIPTOR_VERSION, type EntityDescriptor, type JSONValue, type StoredOptions,} from "./types.js";
 
@@ -89,17 +89,25 @@ export async function buildDescriptor(payload: Payload, overrides: BuildDescript
 
     const collections: EntityDescriptor[] = config.collections
         .filter((c) => !exclude.has(c.slug))
-        .map((c: any) => ({
-            slug: c.slug,
-            dbName: typeof c.dbName === "string" ? c.dbName : null,
-            timestamps: c.timestamps !== false,
-            versions: versionsOf(c.versions),
-            upload: uploadOf(c.upload),
-            auth: Boolean(c.auth),
-            hasReadAccess: hasCustomReadAccess(c.access),
-            hasAfterReadHooks: hasHooks(c.hooks, "afterRead"),
-            fields: serializeFields(c.flattenedFields, ctx, Boolean(c.auth)),
-        }));
+        .map((c: any) => {
+            const out: Record<string, unknown> = {
+                slug: c.slug,
+                dbName: typeof c.dbName === "string" ? c.dbName : null,
+                timestamps: c.timestamps !== false,
+                versions: versionsOf(c.versions),
+                upload: uploadOf(c.upload),
+                auth: Boolean(c.auth),
+                trash: Boolean(c.trash),
+                hasReadAccess: hasCustomReadAccess(c.access),
+                hasAfterReadHooks: hasHooks(c.hooks, "afterRead"),
+            };
+            // Read defaults that change what Find returns. Left out when unset
+            // or not plain JSON.
+            setStatic(out, "defaultSort", c.defaultSort);
+            setStatic(out, "defaultPopulate", c.defaultPopulate);
+            setStatic(out, "forceSelect", c.forceSelect);
+            return {...out, fields: serializeFields(c.flattenedFields, ctx, Boolean(c.auth))} as EntityDescriptor;
+        });
 
     const globals: EntityDescriptor[] = config.globals
         .filter((g) => !exclude.has(g.slug))

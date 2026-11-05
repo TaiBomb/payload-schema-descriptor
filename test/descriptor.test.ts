@@ -1,6 +1,7 @@
 import { beforeAll, describe, expect, it } from "vitest";
 import type { Payload, SanitizedConfig } from "payload";
 import { buildDescriptor, CLI_COMMAND, hashDescriptor, type Descriptor } from "../src/index.js";
+import { serializeField } from "../src/fields.js";
 import { API_KEY, CONNECTION_STRING, fixtureConfig, SECRET } from "./fixture.config.js";
 import { callEndpoint, findEndpoint, offlinePayload } from "./helpers.js";
 
@@ -96,6 +97,49 @@ describe("descriptor", () => {
     // Payload's default access shouldn't count
     expect(media.hasReadAccess).toBe(false);
     expect(d.collections.find((c) => c.slug === "categories")!.dbName).toBe("cats");
+  });
+
+  it("collection read defaults", () => {
+    const posts = d.collections.find((c) => c.slug === "posts")!;
+    expect(posts).toMatchObject({
+      trash: true,
+      defaultSort: "title",
+      defaultPopulate: { title: true },
+      forceSelect: { featured: true },
+    });
+    const media = d.collections.find((c) => c.slug === "media")!;
+    expect(media.trash).toBe(false);
+    for (const k of ["defaultSort", "defaultPopulate", "forceSelect"]) expect(media).not.toHaveProperty(k);
+    // globals have none of these
+    expect(d.globals[0]).not.toHaveProperty("trash");
+  });
+
+  it("join options", () => {
+    const cat = d.collections.find((c) => c.slug === "categories")!.fields;
+    expect(field(cat, "posts")).toMatchObject({
+      defaultLimit: 20,
+      defaultSort: "-publishedAt",
+      where: { featured: { equals: true } },
+      maxDepth: 1,
+    });
+  });
+
+  it("leaves out join options that aren't plain JSON", () => {
+    class Sort {}
+    const out = serializeField(
+      {
+        name: "j",
+        type: "join",
+        collection: "posts",
+        on: "category",
+        defaultSort: new Sort(),
+        where: { featured: { equals: () => true } },
+      },
+      { blocksBySlug: new Map() },
+    );
+    expect(out).not.toHaveProperty("defaultSort");
+    expect(out).not.toHaveProperty("where");
+    expect(out).not.toHaveProperty("defaultLimit");
   });
 
   it("field serialization rules", () => {

@@ -60,6 +60,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "hasReadAccess": false,
       "slug": "users",
       "timestamps": true,
+      "trash": false,
       "upload": false,
       "versions": false,
     },
@@ -266,6 +267,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "hasReadAccess": false,
       "slug": "media",
       "timestamps": true,
+      "trash": false,
       "upload": {
         "imageSizes": [
           "thumbnail",
@@ -287,11 +289,19 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
         },
         {
           "collection": "posts",
+          "defaultLimit": 20,
+          "defaultSort": "-publishedAt",
           "localized": false,
+          "maxDepth": 1,
           "name": "posts",
           "on": "category",
           "required": false,
           "type": "join",
+          "where": {
+            "featured": {
+              "equals": true,
+            },
+          },
         },
         {
           "localized": false,
@@ -310,12 +320,17 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "hasReadAccess": false,
       "slug": "categories",
       "timestamps": true,
+      "trash": false,
       "upload": false,
       "versions": false,
     },
     {
       "auth": false,
       "dbName": null,
+      "defaultPopulate": {
+        "title": true,
+      },
+      "defaultSort": "title",
       "fields": [
         {
           "hasMany": false,
@@ -685,6 +700,12 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
           "type": "date",
         },
         {
+          "localized": false,
+          "name": "deletedAt",
+          "required": false,
+          "type": "date",
+        },
+        {
           "defaultValue": "draft",
           "hasMany": false,
           "localized": false,
@@ -697,10 +718,14 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
           "type": "select",
         },
       ],
+      "forceSelect": {
+        "featured": true,
+      },
       "hasAfterReadHooks": true,
       "hasReadAccess": true,
       "slug": "posts",
       "timestamps": true,
+      "trash": true,
       "upload": false,
       "versions": {
         "drafts": true,
@@ -728,6 +753,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "hasReadAccess": true,
       "slug": "payload-kv",
       "timestamps": false,
+      "trash": false,
       "upload": false,
       "versions": false,
     },
@@ -785,6 +811,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "hasReadAccess": false,
       "slug": "payload-locked-documents",
       "timestamps": true,
+      "trash": false,
       "upload": false,
       "versions": false,
     },
@@ -832,6 +859,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "hasReadAccess": true,
       "slug": "payload-preferences",
       "timestamps": true,
+      "trash": false,
       "upload": false,
       "versions": false,
     },
@@ -870,6 +898,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "hasReadAccess": false,
       "slug": "payload-migrations",
       "timestamps": true,
+      "trash": false,
       "upload": false,
       "versions": false,
     },
@@ -926,7 +955,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "versions": false,
     },
   ],
-  "hash": "sha256:fd5c19bd14c0575a0c9b60681bc9beff0a315af6f25b8afef403d9a0fd475906",
+  "hash": "sha256:bf714676f621a847a769aa01716f29ac1814c11c20b5d1d1c22d98e01545f9d7",
   "lastMigration": "20261104_120000_add_posts",
   "localization": {
     "defaultLocale": "it",
@@ -950,10 +979,10 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
       "_posts_v_version_sections": "_post_sections_v",
       "categories": "cats",
       "enum__posts_v_published_locale": "enum__posts_v_published_locale",
-      "enum__posts_v_version_flags": "post_flags",
+      "enum__posts_v_version_flags": "enum_post_flags",
       "enum__posts_v_version_layout_kind": "enum__posts_v_version_layout_kind",
       "enum__posts_v_version_status": "enum__posts_v_version_status",
-      "enum_posts_flags": "post_flags",
+      "enum_posts_flags": "enum_post_flags",
       "enum_posts_layout_kind": "enum_posts_layout_kind",
       "enum_posts_status": "enum_posts_status",
       "media": "media",
@@ -1080,7 +1109,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
             "type": "integer",
           },
           "value": {
-            "enumName": "post_flags",
+            "enumName": "enum_post_flags",
             "name": "value",
             "options": [
               "a",
@@ -1269,6 +1298,10 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
           },
           "version_createdAt": {
             "name": "version_created_at",
+            "type": "timestamp",
+          },
+          "version_deletedAt": {
+            "name": "version_deleted_at",
             "type": "timestamp",
           },
           "version_details_nested_deep": {
@@ -2114,7 +2147,7 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
             "type": "integer",
           },
           "value": {
-            "enumName": "post_flags",
+            "enumName": "enum_post_flags",
             "name": "value",
             "options": [
               "a",
@@ -2256,6 +2289,10 @@ exports[`descriptor > matches the snapshot (minus generatedAt) 1`] = `
           "createdAt": {
             "name": "created_at",
             "notNull": true,
+            "type": "timestamp",
+          },
+          "deletedAt": {
+            "name": "deleted_at",
             "type": "timestamp",
           },
           "details_nested_deep": {

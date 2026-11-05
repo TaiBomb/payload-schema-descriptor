@@ -2,7 +2,9 @@
  * Test config that tries to hit every field type: groups, named tabs, nested
  * arrays, blocks (inline and via blockReferences), localized fields, single,
  * hasMany and polymorphic relationships, uploads with imageSizes, join, point,
- * virtual and hidden fields, custom dbNames, static and dynamic defaults.
+ * virtual and hidden fields, custom dbNames, static and dynamic defaults,
+ * collection read defaults (defaultSort, defaultPopulate, forceSelect, trash)
+ * and join options.
  */
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig, type Block, type Config } from "payload";
@@ -63,12 +65,25 @@ export const fixtureConfig = (options: Partial<Parameters<typeof schemaDescripto
         dbName: "cats",
         fields: [
           { name: "name", type: "text", required: true },
-          { name: "posts", type: "join", collection: "posts", on: "category" },
+          {
+            name: "posts",
+            type: "join",
+            collection: "posts",
+            on: "category",
+            defaultLimit: 20,
+            defaultSort: "-publishedAt",
+            where: { featured: { equals: true } },
+            maxDepth: 1,
+          },
         ],
       },
       {
         slug: "posts",
         versions: { drafts: true },
+        trash: true,
+        defaultSort: "title",
+        defaultPopulate: { title: true },
+        forceSelect: { featured: true },
         access: { read: () => true },
         hooks: { afterRead: [({ doc }) => doc] },
         fields: [
@@ -83,7 +98,7 @@ export const fixtureConfig = (options: Partial<Parameters<typeof schemaDescripto
           { name: "meta", type: "json" },
           { name: "location", type: "point" },
           { name: "layoutKind", type: "radio", options: [{ label: "Uno", value: "one" }, "two"], defaultValue: "one" },
-          { name: "flags", type: "select", hasMany: true, dbName: "post_flags", options: ["a", "b", "c"] },
+          { name: "flags", type: "select", hasMany: true, dbName: "post_flags", enumName: "enum_post_flags", options: ["a", "b", "c"] },
           { name: "category", type: "relationship", relationTo: "categories", maxDepth: 1 },
           { name: "related", type: "relationship", relationTo: "posts", hasMany: true },
           { name: "mixed", type: "relationship", relationTo: ["posts", "categories"], hasMany: true },

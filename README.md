@@ -114,6 +114,8 @@ generated from a config that uses every field type. Roughly:
       "versions": { "drafts": true },
       "upload": false,
       "auth": false,
+      "trash": false,
+      "defaultSort": "-publishedAt",
       "fields": [
         { "name": "title", "type": "text", "localized": false, "required": true, "hasMany": false },
         { "name": "cover", "type": "upload", "relationTo": "media", "hasMany": false, ... }
@@ -140,8 +142,14 @@ Some notes on the format:
 - `db.version` and `db.versionNum` come from `server_version` and `server_version_num`.
   They're `null` if the database couldn't be reached. In that case the endpoint doesn't
   cache the result and tries again on the next request.
+- Collections also carry the settings that change what a read returns: `trash` (always
+  there), plus `defaultSort`, `defaultPopulate` and `forceSelect` when they're set. Join
+  fields carry `defaultLimit`, `defaultSort`, `where` and `maxDepth` when they're set.
+  Without them a reader falls back to Payload's defaults and can return documents in a
+  different order, or different documents, than Payload would.
 - Functions never make it into the output. Access control, `afterRead` hooks and dynamic
   defaults show up as `hasReadAccess`, `hasAfterReadHooks` and `hasDynamicDefault` flags.
+  A `defaultSort`, `where` or select map that isn't plain JSON is left out entirely.
 - Secrets are left out on purpose: no `secret`, no connection string or pool settings, and
   none of the auth fields Payload adds (`hash`, `salt`, reset and verification tokens,
   `apiKey`, `sessions`). There's a test for this.

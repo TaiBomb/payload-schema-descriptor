@@ -27,7 +27,7 @@ export type FieldContext = {
 };
 
 /** Returns undefined for anything that isn't plain JSON (functions, class instances, ...). */
-function asStaticJSON(value: unknown): JSONValue | undefined {
+export function asStaticJSON(value: unknown): JSONValue | undefined {
   if (value === null) return null;
   switch (typeof value) {
     case "string":
@@ -59,6 +59,13 @@ function asStaticJSON(value: unknown): JSONValue | undefined {
     default:
       return undefined;
   }
+}
+
+/** Sets out[key] when value is set and plain JSON, leaves it out otherwise. */
+export function setStatic(out: Record<string, unknown>, key: string, value: unknown): void {
+  if (value === undefined || value === null) return;
+  const json = asStaticJSON(value);
+  if (json !== undefined) out[key] = json;
 }
 
 function serializeBlock(block: BlockLike, ctx: FieldContext): BlockDescriptor {
@@ -94,7 +101,7 @@ export function serializeField(field: AnyField, ctx: FieldContext): FieldDescrip
   if ((field.type === "relationship" || field.type === "upload") && field.relationTo !== undefined) {
     out.relationTo = Array.isArray(field.relationTo) ? [...field.relationTo] : field.relationTo;
   }
-  if ((field.type === "relationship" || field.type === "upload") && typeof field.maxDepth === "number") {
+  if ((field.type === "relationship" || field.type === "upload" || field.type === "join") && typeof field.maxDepth === "number") {
     out.maxDepth = field.maxDepth;
   }
 
@@ -107,6 +114,11 @@ export function serializeField(field: AnyField, ctx: FieldContext): FieldDescrip
   if (field.type === "join") {
     out.collection = Array.isArray(field.collection) ? [...field.collection] : field.collection;
     out.on = field.on;
+    if (typeof field.defaultLimit === "number") out.defaultLimit = field.defaultLimit;
+    // defaultSort and where only go out when they're plain JSON, otherwise a
+    // reader would apply a different filter than Payload does
+    setStatic(out, "defaultSort", field.defaultSort);
+    setStatic(out, "where", field.where);
   }
 
   if (field.type === "group" || field.type === "tab" || field.type === "array") {
